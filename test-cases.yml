@@ -23,7 +23,7 @@
   prerequisites: |
     Открыта страница регистрации
   test-data: |
-    Email = avjalceva@gmail.com
+    Email = asdf.asdfghj.05@mail.ru
   steps:
     - Заполняем поле "Nickname"
     - Заполняем поле "Email"
@@ -33,4 +33,118 @@
   expected-result: |
     Под полем "Email" появляется надпись "Email is already taken"
 
+- summary: |
+    Неудачная регистрация нового профиля с несуществующим мейлом
+  requirement: |
+    При введении несуществующего мейла регистрация невозможна 
+  prerequisites: |
+    Открыта страница регистрации
+  test-data: |
+    empty
+  steps:
+    - Заполняем поле "Nickname"
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Заполняем поле "Password Confirmation"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Регистрация не проходит
 
+- summary: |
+    Неудачная регистрация нового профиля с мейлом неправильного типа
+  requirement: |
+    При введении мейла, который не соответствует стандарту (abc@abc.ru) регистрация невозможна 
+  prerequisites: |
+    Открыта страница регистрации
+  test-data: |
+    Email = hexlet.ru
+  steps:
+    - Заполняем поле "Nickname"
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Заполняем поле "Password Confirmation"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Под полем "Email" появляется надпись "Invalid email"
+    
+- summary: |
+    Неудачная регистрация нового профиля с уже зарегистрированным именем пользователя
+  requirement: |
+    При повторном использовании одного и того же имени пользователя регистрация невозможна 
+  prerequisites: |
+    Открыта страница регистрации
+  test-data: |
+    Nickname = QWERTY
+  steps:
+    - Заполняем поле "Nickname"
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Заполняем поле "Password Confirmation"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Под полем "Nickname" появляется надпись "Nickname is already taken"
+
+- summary: |
+    Неудачная регистрация нового профиля при ошибке в поле подтверждения пароля
+  requirement: |
+    При несовпадении паролей регистрация невозможна
+  prerequisites: |
+    Открыта страница регистрации
+  test-data: |
+    empty
+  steps:
+    - Заполняем поле "Nickname"
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Заполняем поле "Password Confirmation" так, чтобы оно не совпадало с полем "Password"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Под полем "Password Confirmation" появляется надпись "Passwords must match"
+
+- summary: |
+    Успешная авторизация существующего пользователя
+  requirement: |
+    При верном заполнении всех полей пользователь успешно авторизуется
+  prerequisites: |
+    Открыта страница авторизации
+  test-data: |
+    Email = asdf.asdfghj.05@mail.ru Пароль = 123456
+  steps:
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь успешно авторизирован
+
+- summary: |
+    Неудачная авторизация несуществующего пользователя
+  requirement: |
+    При заполнении всех полей выдуманными данными авторизация невозможна
+  prerequisites: |
+    Открыта страница авторизации
+  test-data: |
+    empty
+  steps:
+    - Заполняем поле "Email"
+    - Заполняем поле "Password"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Авторизация не прошла, появляется надпись "EMAIL_NOT_FOUND"
+
+- summary: |
+    Востановление пароля
+  requirement: |
+    При утрате пароля его можно восстановить с помощью мейла
+  prerequisites: |
+    Открыта страница авторизации
+  test-data: |
+    empty
+  steps:
+    - Нажимаем кнопку "Forgot your password?"
+    - Вводим мейл
+    - Проверяем указанную почту
+    - Переходим по ссылке в письме
+    - Вводим новый пароль
+    - Вводим мейл и новый пароль на страницу авторизации
+  expected-result: |
+    Авторизация прошла успешно
