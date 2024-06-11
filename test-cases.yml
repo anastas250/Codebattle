@@ -231,6 +231,7 @@
     Открыта главная страница
     Создан второй пользователь
   test-data: |
+    empty
   steps:
     - Нажимаем на кнопку "Create a game"
     - Нажимем кнопку "With a friend"
@@ -901,7 +902,9 @@
   prerequisites: |
     Открыта главная страница
   test-data: |
-    Браузеры = Chrome, Firefox, Safari
+    Браузер = Chrome
+    Браузер = Firefox 
+    Браузер = Safari
   steps:
     - Открыть сайт Codebattle с Chrome
     - Открыть сайт Codebattle с Safari
