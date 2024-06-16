@@ -1,10 +1,23 @@
 ---
 - summary: |
+    Переход на страницу регистрации
+  requirement: |
+    При нажатии на кнопку "Sign up" открывается страница регистрации
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/?_gl=1*e4f6c3*_ga*MjExNzg4MTkyNS4xNzE0NzI1NDU4*_ga_PM3R85EKHN*MTcxODU0Njc0MS44NS4xLjE3MTg1NDc5MTcuMC4wLjA.*_ga_WWGZ6EVHEY*MTcxODU0Njc0MS43Ni4xLjE3MTg1NDc4NDguMC4wLjA.
+  test-data: |
+    empty
+  steps:
+    - Нажимаем кнопку "Sign up"
+  expected-result: |
+    Выполняется переход на страницу регистрации
+
+- summary: |
     Успешная регистрация нового профиля
   requirement: |
     При верном заполнении всех полей регистрируется новый пользователь
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
