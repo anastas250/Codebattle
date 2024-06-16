@@ -34,7 +34,7 @@
   requirement: |
     При отсутствии данных в полях регистрация невозможна
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
@@ -47,7 +47,7 @@
   requirement: |
     При повторном использовании одного и того же мейла регистрация невозможна 
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Email = asdf.asdfghj.05@mail.ru
   steps:
@@ -64,7 +64,7 @@
   requirement: |
     При введении несуществующего мейла регистрация невозможна 
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
@@ -81,7 +81,7 @@
   requirement: |
     При введении мейла, который не соответствует стандарту (abc@abc.ru) регистрация невозможна 
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Email = hexlet.ru
   steps:
@@ -98,7 +98,7 @@
   requirement: |
     При повторном использовании одного и того же имени пользователя регистрация невозможна 
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Nickname = QWERTY
   steps:
@@ -115,7 +115,7 @@
   requirement: |
     При несовпадении паролей регистрация невозможна
   prerequisites: |
-    Открыта страница регистрации
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
@@ -128,11 +128,24 @@
     Под полем "Password Confirmation" появляется надпись "Passwords must match"
 
 - summary: |
+    Переход на страницу авторизации
+  requirement: |
+    При нажатии на кнопку "Sign in" открывается страница регистрации
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/?_gl=1*e4f6c3*_ga*MjExNzg4MTkyNS4xNzE0NzI1NDU4*_ga_PM3R85EKHN*MTcxODU0Njc0MS44NS4xLjE3MTg1NDc5MTcuMC4wLjA.*_ga_WWGZ6EVHEY*MTcxODU0Njc0MS43Ni4xLjE3MTg1NDc4NDguMC4wLjA.
+  test-data: |
+    empty
+  steps:
+    - Нажимаем кнопку "Sign in"
+  expected-result: |
+    Выполняется переход на страницу авторизации
+
+- summary: |
     Успешная авторизация существующего пользователя
   requirement: |
     При верном заполнении всех полей пользователь успешно авторизуется
   prerequisites: |
-    Открыта страница авторизации
+    Открыта страница авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Email = asdf.asdfghj.05@mail.ru Пароль = 123456
   steps:
@@ -147,7 +160,7 @@
   requirement: |
     При заполнении всех полей выдуманными данными авторизация невозможна
   prerequisites: |
-    Открыта страница авторизации
+    Открыта страница авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
@@ -162,7 +175,7 @@
   requirement: |
     При утрате пароля его можно восстановить с помощью мейла
   prerequisites: |
-    Открыта страница авторизации
+    Открыта страница авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     empty
   steps:
@@ -180,7 +193,8 @@
   requirement: |
     При смене уровня сложности меняется и список заданий
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Пользователь авторизирован
   test-data: |
     empty
   steps:
@@ -194,7 +208,7 @@
   requirement: |
     Пользователи-игроки должны справится с заданием за установленное время
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -210,7 +224,7 @@
   requirement: |
     Пользователи-игроки должны справится с заданием за установленное время
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -226,7 +240,7 @@
   requirement: |
     Пользователи должны иметь возможность играть против бота
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -241,7 +255,7 @@
   requirement: |
     Пользователи должны иметь возможность приглашать конкретных пользователей в игру
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
     Создан второй пользователь
   test-data: |
     empty
@@ -258,7 +272,7 @@
   requirement: |
     Пользователи должны иметь возможность принимать высланное им приглашение на игру с другом
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
     Создан второй пользователь
     Приглашение на игру отправлено второму пользователю
   test-data: |
@@ -275,7 +289,7 @@
   requirement: |
     Пользователи должны иметь возможность отклонять высланное им приглашение на игру с другом
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
     Создан второй пользователь
     Приглашение на игру отправлено второму пользователю
   test-data: |
@@ -292,7 +306,7 @@
   requirement: |
     Пользователи должны иметь возможность создавать игры против других пользователей
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -307,7 +321,7 @@
   requirement: |
     Пользователи должны иметь возможность удалять созданные игры против других пользователей с главной страницы
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -323,7 +337,7 @@
   requirement: |
     Пользователи должны иметь возможность удалять созданные игры против других пользователей со страницы игры
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -340,7 +354,7 @@
   requirement: |
     Пользователи должны иметь возможность копировать ссылку на созданную игру против других пользователей с главной страницы
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -356,7 +370,7 @@
   requirement: |
     Пользователи должны иметь возможность копировать ссылку на созданную игру против других пользователей со страницы игры
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -373,7 +387,7 @@
   requirement: |
     Пользователи должны иметь возможность отправлять ссылку на созданную игру против других пользователей
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
     Создана игра с другим пользователем
     Создан второй пользователь
   test-data: |
@@ -391,7 +405,7 @@
   requirement: |
     Пользователи должны иметь возможность фильтровать игры по тэгу
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -406,7 +420,7 @@
   requirement: |
     Пользователи должны иметь возможность фильтровать игры по нескольким тэгам
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -422,7 +436,7 @@
   requirement: |
     Пользователи должны иметь возможность рандомно выбирать игру
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -439,7 +453,7 @@
   requirement: |
     Пользователи должны иметь возможность выбирать игру из выпадающего списка
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -456,7 +470,7 @@
   requirement: |
     При запуске игры все настройки должны соответствовать выбранным параметрам
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -474,7 +488,7 @@
   requirement: |
     Пользователи не могут создавать одновременно две игры
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -867,7 +881,7 @@
   requirement: |
     Пользователи должны иметь возможность присоединяться к игре другого игрока
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -881,7 +895,7 @@
   requirement: |
     Пользователи должны иметь возможность присоединяться к турнирам
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -911,7 +925,7 @@
   requirement: |
     Пользователи должны иметь возможность получать информацию о всех завершенных играх
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -926,7 +940,7 @@
   requirement: |
     При открытии сайта с мобильного устройства сайт должен адаптироваться под него
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -942,7 +956,7 @@
   requirement: |
     Все запросы сайта уходят и приходят ответы без ошибок
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -956,7 +970,7 @@
   requirement: |
     Сайт открывается и адаптируется в любом браузере
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     Браузер = Chrome
     Браузер = Firefox 
@@ -973,7 +987,7 @@
   requirement: |
     Сайт должен быть оптимизировн для низкой скорости интернета
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -989,7 +1003,7 @@
   requirement: |
     Сайт должен выдавать сообщение об отсутствии интернета
   prerequisites: |
-    Открыта главная страница
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
