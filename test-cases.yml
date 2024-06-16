@@ -910,6 +910,7 @@
   prerequisites: |
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
+    Есть доступная для присоединения игра
   test-data: |
     empty
   steps:
