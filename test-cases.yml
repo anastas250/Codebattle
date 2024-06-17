@@ -211,12 +211,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = 30 минут
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимем кнопку "With a bot"
-    - Устанавливаем временное ограничение 30 минут
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимем кнопку "Create the battle"
   expected-result: |
     На экране идет обратный отсчет, начиная с 30 минут
@@ -229,11 +230,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимем кнопку "With a bot"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимем кнопку "Create the battle"
   expected-result: |
     Начинается игра против бота
@@ -247,12 +250,14 @@
     Создан второй пользователь
     Оба пользователя авторизированы
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With a friend
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
     - Нажимем кнопку "With a friend"
     - Вписываем имя оппонента (второй пользователь)
-    - Остальные параметры оставляем по умолчанию
     - Нажимем кнопку "Create invite"
   expected-result: |
     Оппонент получил приглашение на игру
@@ -267,8 +272,10 @@
     Оба пользователя авторизированы
     Приглашение на игру отправлено второму пользователю
   test-data: |
+    Level = по умолчанию
     Game Type = With a friend
-    Остальные параметры = по умолчанию
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - На другом устройстве параллельно заходим в профиль второго пользователя
     - Нажимаем на значок с двумя скрещенными мечами
@@ -286,8 +293,10 @@
     Оба пользователя авторизированы
     Приглашение на игру отправлено второму пользователю
   test-data: |
+    Level = по умолчанию
     Game Type = With a friend
-    Остальные параметры = по умолчанию
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - На другом устройстве параллельно заходим в профиль второго пользователя
     - Нажимаем на значок с двумя скрещенными мечами
@@ -303,11 +312,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем кнопку "With other user"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимаем кнопку "Create battle"
   expected-result: |
     Игра отображается в списке на главной странице
@@ -320,11 +331,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем кнопку "With other user"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимаем кнопку "Create battle"
     - Нажимаем на значок крестика в строке с созданной игрой
   expected-result: |
@@ -338,11 +351,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем кнопку "With other user"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимаем кнопку "Create battle"
     - Нажимаем кнопку "Continue"
     - Нажимаем кнопку "Cancel"
@@ -357,11 +372,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем кнопку "With other user"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимаем кнопку "Create battle"
     - Нажимаем на иконку копирования
   expected-result: |
@@ -375,11 +392,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем кнопку "With other user"
-    - Остальные параметры оставляем по умолчанию
+    - Создаем игру по указанным параметрам
     - Нажимаем кнопку "Create battle"
     - Нажимаем кнопку "Continue"
     - Нажимаем кнопку "Copy"
@@ -396,8 +415,10 @@
     Создан второй пользователь
     Оба пользователя авторизированы
   test-data: |
-    Game type = With other user
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With other user
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Копируем ссылку на игру
     - Отправляем ссылку второму пользователю
@@ -447,12 +468,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = четыре звезды
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = random task
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем на кнопку с изображением четырех звезд
-    - Нажимаем на кнопку "With a bot"
-    - Из выпадающего списка оставляем "random task"
+    - Создаем игру по указанным параметрам
     - Нажимаем на кнопку "Create battle"
   expected-result: |
     Должна запуститься любая игра из списка, который относится к максимальному укровню сложности
@@ -465,12 +487,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = четыре звезды
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = count_and_say
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем на кнопку с изображением четырех звезд
-    - Нажимаем на кнопку "With a bot"
-    - Из выпадающего списка выбираем "count_and_say"
+    - Создаем игру по указанным параметрам
     - Нажимаем на кнопку "Create battle"
   expected-result: |
     Должна запуститься игра "count_and_say"
@@ -483,13 +506,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = две звезды
+    Game Type = With a bot
+    Time control = 30 минут
+    Choose task by name or tags = base_n
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Нажимаем на кнопку с изображением двух звезд
-    - Нажимаем на кнопку "With a bot"
-    - Устанавливаем время на 30 минут
-    - Из выпадающего списка выбираем "base_n"
+    - Создаем игру по указанным параметрам
     - Нажимаем на кнопку "Create battle"
   expected-result: |
     Должна запуститься игра "base_n" против бота с таймером на 30 минут
@@ -502,11 +525,13 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Create a game"
-    - Создаем игру
+    - Создаем игру по указанным параметрам
     - Возвращаемся на главную страницу
   expected-result: |
     Нельзя создать новую игру, только продолжить текущую
@@ -519,8 +544,10 @@
     Пользователь авторизирован
     Создана и открыта игра против бота
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Открыть выпадающий список с языками программирования
     - Выбрать "Java"
@@ -536,8 +563,10 @@
     Создана и открыта игра против бота
     Выбран язык NodeJS
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Начать кодить на языке NodeJS
     - Открыть выпадающий список с языками программирования
@@ -553,8 +582,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Попробовать кодить в терминале соперника
   expected-result: |
@@ -569,8 +600,10 @@
     Создана и открыта игра
     Требуется второй профиль
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Со второго профиля открыть текущую игру
     - Попробовать кодить в терминале игроков
@@ -646,8 +679,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажать на красную иконку с флагом
     - Нажать кнопку "Give up"
@@ -662,8 +697,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажать на красную иконку с флагом
     - Нажать кнопку "Cancel"
@@ -678,8 +715,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Начать кодить
     - Нажать кнопку "Run"
@@ -694,8 +733,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Начать кодить
     - Нажать на синюю иконку со стрелочками
@@ -711,8 +752,10 @@
     Создана и открыта игра
     По умолчанию выбран темный цвет оформления терминала
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажать на кнопку Light
   expected-result: | 
@@ -727,9 +770,10 @@
     Необходимо два аккаунта
     Оба пользователя авторизированы
   test-data: |
+    Level = по умолчанию
     Game type = With a friend
     Time control = 3 минуты
-    Остальные параметры = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Ждем завершения обратного отсчета
   expected-result: |
@@ -744,8 +788,10 @@
     Необходимо два аккаунта
     Оба пользователя авторизированы
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Копируем ссылку на игру
     - С другого аккаукнта открываем ссылку
@@ -760,8 +806,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Пишем в строку для ввода сообщений "Привет"
     - Нажимаем кнопку "Send"
@@ -777,8 +825,10 @@
     Необходимо два аккаунта
     Оба пользователя авторизированы
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Со второго аккаунта заходим в созданную игру 
     - Со второго аккаунта пишем в строку для ввода сообщений "Привет"
@@ -795,8 +845,10 @@
     Создана и открыта игра
     Задача описана на русском языке
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "RU"
     - Из выпадающего списка выбираем "EN"
@@ -812,8 +864,10 @@
     Создана и открыта игра против бота
     Задача описана на английском языке
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "EN"
     - Из выпадающего списка выбираем "RU"
@@ -828,8 +882,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Show guide"
   expected-result: |
@@ -843,8 +899,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Show guide"
     - Нажимаем на кнопку "Skip guide"
@@ -859,8 +917,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Show guide"
     - Нажимаем на кнопку "Next"
@@ -876,8 +936,10 @@
     Создана и открыта игра
     Гайд открыт на третьем пункте
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Back"
   expected-result: |
@@ -891,8 +953,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на логотип
   expected-result: |
@@ -906,8 +970,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Back to Home"
   expected-result: |
@@ -921,8 +987,10 @@
     Пользователь авторизирован
     Создана и открыта игра
   test-data: |
-    Game type = With a bot
-    Остальные параметры = по умолчанию
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Нажимаем на кнопку "Back to Home"
     - Нажимаем на кнопку "Continue"
@@ -1072,7 +1140,10 @@
     Открыта главная страница https://codebattle.hexlet.io/#lobby
     Пользователь авторизирован
   test-data: |
-    empty
+    Level = по умолчанию
+    Game Type = With a bot
+    Time control = по умолчанию
+    Choose task by name or tags = по умолчанию
   steps:
     - Открыть DevTools
     - Открыть вкладку Network
